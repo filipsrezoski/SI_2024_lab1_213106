@@ -1,0 +1,72 @@
+4. Napraviv direktorioum:
+- mkdir SI_2024_lab1_213106
+- cd SI_2024_lab1_213106
+- git init
+5. Go povrzav so GitHub:
+-git remote add origin git@github.com:filipsrezoski/SI_2024_lab1_213106.git
+6. Napraviv README.md datoteka i zapishav:
+- nano README.md
+7. Sledni se ovie komandi: 
+- git add --all
+- git commit -m "Add starter code"
+8. Sihronizacija:
+- git push origin master 
+9. Otvoriv dve granki so komandite:
+- git branch bug1
+- git branch bug2
+i napishav git branch da vidam dali se vneseni
+10. Se prefrliv na bug1:
+- git checkout bug1
+11. Ja popraviv i napraviv commit:
+- nano SILab1_1.java
+- git add SILab1_1.java
+- git commit -m " Fix wrong condition in filterOddLengthStrings"
+12. Se prefrliv na bug2:
+-git checkout bug2
+13. Ja popraviv i napraviv commit:
+- nano SILab1_2.java
+- git add SILab1_2.java
+- git commit -m " Fix wrong condition in makeBigStringFrom"
+14. Se vrativ na bug1;
+- git checkout bug1
+15. Go dodadov kodot:
+- ls (za da go kopiram imeto na fajlot)
+- nano SLLab1Main.java
+- git add SILab1Main.java
+- git commit -m " Call method filterOddLengthStrings in main class"
+16. Se vrativ na bug2:
+- git checkout bug2
+17. Go dodaov kodot:
+- nano SLLab1Main.java
+- git add SILab1Main.java
+- git commit -m " Call method makeBigStringFrom in main class"
+18. Gi sihronizirav site granki:
+- git push --all
+19. Se prefrliv na master:
+- git checkout master
+20. Ja spoiv bug1 grankata kon master:
+- git merge bug1
+21. Gi sihronizirav site granki:
+- git push --all
+22. Se prefrliv na grankta bug2:
+- git checkout bug
+23. Napraviv rebase, go popraviv konflikot:
+-git rebase master
+-imashe konflikt i mi pokazha vo koj folder e.. Beshe vo SILab1Main.java
+- Gi izbrishav >>>> HEAD i ====== i <<<<< END
+- git add SILab1Main.java
+-git rebase --continue
+24. Se prefrliv na master grankata: 
+- git checkout master
+25.Ja spoiv bug2 grankata so master grankata:
+- git merge bug2
+26 i  27. Gi sihronizirav so remote repozitoriumot:
+- Prvo napishav git push --all no izleze konflikt
+- Potoa probav so git push --force --all i uspea. 
+28. Site logovi gi staviv vo logs.txt.
+- git log > logs.txt 
+- git add logs.txt
+-git add 213106.txt
+- git commit -m "Final commit"
+29. Gi sihronizirav site granki so remote. 
+- git push --all
